@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+:root {
+  --brand-background-color-primary: #f1f1f1;
+  --brand-color-primary: #1f2044;
+  --brand-color-secondary: #0070d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+
+  background-color: var(--brand-background-color-primary);
+
+  & .logo {
+    font-family: "Michroma", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1rem;
+    /* text-align: start; */
+    color: #f00a0a;
+  }
+}
+
+.main {
+  & .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 8rem 10rem;
+    background-color: var(--brand-background-color-primary);
+
+    & .banner-text {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2rem;
+
+      height: 100%;
+      width: 50%;
+
+      color: var(--brand-color-primary);
+
+      /* padding-right: 4rem; */
+
+      & .title {
+        font-size: 4.8rem;
+        font-weight: 800;
+        line-height: 1.1;
+
+        & .text-animation {
+          position: relative;
+          color: var(--brand-color-secondary);
+        }
+
+        & .text-animation::before {
+          content: "";
+          /* color: var(--brand-color-secondary); */
+          animation: texts 25s infinite;
+        }
+
+        & .text-animation::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          border-left: 0.4rem solid var(--brand-color-secondary);
+          right: -1rem;
+          animation: cursor 0.8s infinite, write 25s steps(15) infinite;
+          width: calc(100% + 1.5rem);
+          background-color: #f1f1f1;
+        }
+      }
+
+      & .subtitile {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      & .services-checked {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        & .checked-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+
+          & .icon {
+            font-size: 1.6rem;
+            color: #45bb88;
+          }
+
+          & span {
+            font-size: 1.6rem;
+            font-weight: 300;
+          }
+        }
+      }
+
+      & .btn {
+        padding: 1.5rem 3rem;
+        margin-top: 2rem;
+
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        border-radius: 0.5rem;
+
+        color: #fff;
+        background-color: var(--brand-color-secondary);
+        box-shadow: 0.6rem 0.5rem 0.5rem #00000081;
+      }
+    }
+
+    & .banner-img {
+      height: 40rem;
+      width: 50%;
+
+      background: url(../img/modelo-desenho-removebg-preview.png) top center /
+        cover no-repeat;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    & .banner {
+      flex-direction: column;
+      gap: 0;
+      padding: 4rem 2rem;
+
+      & .banner-text {
+        gap: 1.5rem;
+        width: 100%;
+
+        & .title {
+          font-size: 2.4rem;
+          font-weight: 600;
+        }
+
+        & .subtitile {
+          font-size: 1.6rem;
+          width: 90%;
+
+          & br {
+            display: none;
+          }
+        }
+
+        & .services-checked {
+          gap: 0.6rem;
+
+          & .checked-box {
+            gap: 0.6rem;
+            & .icon {
+              font-size: 1.4rem;
+            }
+
+            & span {
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        & .btn {
+          width: 100%;
+        }
+      }
+
+      & .banner-img {
+        height: 25rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes texts {
+  0%,
+  20% {
+    content: "um site";
+  }
+  21%,
+  40% {
+    content: "uma loja virtual";
+  }
+  41%,
+  60% {
+    content: "um blog";
+  }
+  61%,
+  80% {
+    content: "um aplicativo";
+  }
+  81%,
+  100% {
+    content: "um sistema";
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 0.2rem solid #f1f1f1;
+  }
+}
+
+@keyframes write {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 1.5rem);
+  }
+}
