@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 :root {
-  --brand-background-color-primary: #f1f1f1;
+  /* --brand-background-color-primary: #f1f1f1; */
+  --brand-background-color-primary: #eaf3fa;
   --brand-color-primary: #1f2044;
   --brand-color-secondary: #0070d1;
 }
@@ -85,7 +86,7 @@ html {
           right: -1rem;
           animation: cursor 0.8s infinite, write 25s steps(15) infinite;
           width: calc(100% + 1.5rem);
-          background-color: #f1f1f1;
+          background-color: var(--brand-background-color-primary);
         }
       }
 
@@ -172,12 +173,12 @@ html {
         width: 100%;
 
         & .title {
-          font-size: 2.8rem;
+          font-size: 2.6rem;
           font-weight: 600;
         }
 
         & .subtitile {
-          font-size: 2rem;
+          font-size: 1.8rem;
           width: 90%;
 
           & br {
@@ -195,11 +196,11 @@ html {
           & .checked-box {
             gap: 0.6rem;
             & .icon {
-              font-size: 1.6rem;
+              font-size: 1.4rem;
             }
 
             & span {
-              font-size: 1.6rem;
+              font-size: 1.4rem;
             }
           }
         }
@@ -243,7 +244,7 @@ html {
 
 @keyframes cursor {
   0% {
-    border-left: 0.2rem solid #f1f1f1;
+    border-left: 0.2rem solid var(--brand-background-color-primary);
   }
 }
 
