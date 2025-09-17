@@ -153,6 +153,14 @@ html {
 }
 
 @media only screen and (max-width: 992px) {
+  .header {
+    padding: 1.5rem 0;
+
+    & .logo {
+      font-size: 1.6rem;
+    }
+  }
+
   .main {
     & .banner {
       flex-direction: column;
@@ -164,12 +172,12 @@ html {
         width: 100%;
 
         & .title {
-          font-size: 2.4rem;
+          font-size: 2.8rem;
           font-weight: 600;
         }
 
         & .subtitile {
-          font-size: 1.6rem;
+          font-size: 2rem;
           width: 90%;
 
           & br {
@@ -187,11 +195,11 @@ html {
           & .checked-box {
             gap: 0.6rem;
             & .icon {
-              font-size: 1.4rem;
+              font-size: 1.6rem;
             }
 
             & span {
-              font-size: 1.4rem;
+              font-size: 1.6rem;
             }
           }
         }
@@ -203,7 +211,7 @@ html {
       }
 
       & .banner-img {
-        height: 28rem;
+        height: 26rem;
         width: 100%;
       }
     }
