@@ -191,6 +191,10 @@ html {
         }
 
         & .services-checked {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex-wrap: nowrap;
           gap: 0.6rem;
 
           & .checked-box {
